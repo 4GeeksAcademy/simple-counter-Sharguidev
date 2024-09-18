@@ -15,11 +15,23 @@ var intervalID = setInterval(myCallback, 1000);
 
 let counter = 0;
 
+const MainComponent = () => {
+  return  <>
+    <SecondsCounter seconds={counter}/>
+    <div className="d-flex mt-4 ms-3 justify-content-center">
+    <button type="button" className="btn btn-outline-success ">Start</button>
+    <button type="button" className="btn btn-outline-danger ms-3">Stop</button>
+    <button type="button" className="btn btn-outline-warning ms-3">Reset</button>
+    </div>
+    
+  </>
+}
+
 function myCallback() {
   // Tu código debe ir aquí
   // Los parámetros son totalmente opcionales
   counter++;
-  ReactDOM.createRoot(document.getElementById('app')).render(<SecondsCounter seconds={counter}/>);
+  ReactDOM.createRoot(document.getElementById('app')).render(<MainComponent/>);
   
 
 }
