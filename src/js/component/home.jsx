@@ -8,7 +8,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	return (
 		<div className="container-fluid bg-dark d-flex justify-content-center gap-1">
-			<Cards/>
+			<Cards num={0}/>
 			<Cards/>
 			<Cards/>
 			<Cards/>
