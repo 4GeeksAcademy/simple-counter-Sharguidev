@@ -12,7 +12,7 @@ import SecondsCounter from "./component/SecondsCounter.jsx";
 
 let intervalID;
 
-let app = ReactDOM.createRoot(document.getElementById('app'));
+
 
 function renderCount() {
   // Tu código debe ir aquí
@@ -30,6 +30,12 @@ const MainComponent = () => {
 
   return  <>
     <SecondsCounter seconds={counter}/>
+
+    <label>Starting Value</label>
+    <input className="form-control" col-3 type="number" onChange={(event)=> { 
+        counter = event.target.value;
+        app.render(<MainComponent/>);
+    }} />
     <div className="d-flex mt-4 ms-3 justify-content-center">
       <button  onClick={()=>{
 
@@ -61,7 +67,7 @@ const MainComponent = () => {
   </>
 }
 
-
+let app = ReactDOM.createRoot(document.getElementById('app'));
 app.render(<MainComponent/>);
 
 // ReactDOM.createRoot(document.getElementById('app')).render(<MainComponent/>);
