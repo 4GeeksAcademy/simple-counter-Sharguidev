@@ -15,7 +15,12 @@ const SecondsCounter = ({seconds}) => {
 		<div className="container-fluid bg-dark d-flex justify-content-center gap-1">
 			
 			
-			<Cards />
+
+			 <div className="card bg-dark text-light">
+				<div className="card-body">
+					<h5 className="card-title"><i class="fa-solid fa-clock"></i></h5>
+				</div>
+			</div>
 			<Cards num={Math.floor(seconds % 1000000/100000)}/>
 			<Cards num={Math.floor(seconds % 100000/10000)}/>
 			<Cards num={Math.floor(seconds % 10000/1000)}/>

@@ -31,11 +31,18 @@ const MainComponent = () => {
   return  <>
     <SecondsCounter seconds={counter}/>
 
-    <label>Starting Value</label>
-    <input className="form-control" col-3 type="number" onChange={(event)=> { 
-        counter = event.target.value;
-        app.render(<MainComponent/>);
-    }} />
+
+    <div class="row g-3 justify-content-center m-2">
+      <div class="col-auto d-flex flex-column justify-content-center">
+        <label className="text-light">Starting Value</label> 
+        <input className="form-control "  type="number" onChange={(event)=> { 
+            counter = event.target.value;
+            app.render(<MainComponent/>);
+        }} />
+      </div>
+    </div>
+
+    
     <div className="d-flex mt-4 ms-3 justify-content-center">
       <button  onClick={()=>{
 
@@ -52,6 +59,7 @@ const MainComponent = () => {
 
 
       <button type="button" onClick={()=>{
+        
         if(intervalID){
           clearInterval(intervalID);
           counter = 0;
