@@ -11,7 +11,6 @@ import SecondsCounter from "./component/SecondsCounter.jsx";
 //render your react application
 
 
-
 var intervalID = setInterval(myCallback, 1000);
 
 let counter = 0;

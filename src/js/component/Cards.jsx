@@ -3,14 +3,14 @@ import PropType from "prop-types";
 
 export default function Cards(props) {
   return (
-    <div class="card bg-dark text-light">
-      <div class="card-body">
-        <h5 class="card-title">{props.num}</h5>
+    <div className="card bg-dark text-light">
+      <div className="card-body">
+        <h5 className="card-title">{props.num}</h5>
       </div>
     </div>
   );
 }
 
-Cards.PropTypes = {
+Cards.propTypes = {
     num : PropType.number
 };
