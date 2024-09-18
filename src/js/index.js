@@ -32,8 +32,8 @@ const MainComponent = () => {
     <SecondsCounter seconds={counter}/>
 
 
-    <div class="row g-3 justify-content-center m-2">
-      <div class="col-auto d-flex flex-column justify-content-center">
+    <div className="row g-3 justify-content-center m-2">
+      <div className="col-auto d-flex flex-column justify-content-center">
         <label className="text-light">Starting Value</label> 
         <input className="form-control "  type="number" onChange={(event)=> { 
             counter = event.target.value;
@@ -59,7 +59,7 @@ const MainComponent = () => {
 
 
       <button type="button" onClick={()=>{
-        
+
         if(intervalID){
           clearInterval(intervalID);
           counter = 0;
